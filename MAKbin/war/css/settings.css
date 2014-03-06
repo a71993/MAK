@@ -1,0 +1,32 @@
+
+#loginnupud{
+    position: relative;
+    top: 10em;
+    left: 15em;
+    display: inline-block;
+    color: white;
+}
+
+#field{
+    position: absolute;
+    left: 10em;
+    display: inline-block;
+    background-color: white;
+    width: 10em;
+    height: 1em;    
+}
+
+
+#forgotsubmit{
+    position: relative;
+    top: 11em;
+    left: 32em;
+}
+
+#settings{
+    position: relative;
+    top: 2em;
+    left: 2em;
+    font-size: 2em;
+    color:white;
+}

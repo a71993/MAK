@@ -1,0 +1,65 @@
+
+#nupurida{
+    position: relative;
+    left: 6em;
+    color: white;
+    background-color: blue;
+    width: 15em;
+    text-align: center;
+}
+
+#pastefield{
+    position: relative;
+    left: 6em;
+    top: 2em;
+    display: inline-block;   
+    background-color: white;
+    width: 75%;
+    height: 20em;
+}
+
+#preview{
+   position: relative;
+   left: 6em;
+   top: 2em;
+   display: inline-block;   
+   background-color: grey;
+   width: 75%;
+   height: 15em;
+}
+#submit{
+    position: relative;
+    top: 3em;
+    left: 40em;
+}
+
+#syntaxnupud{
+    position: relative;
+    top: 3em;
+    left: 6em;
+    color: white;
+}
+
+#syntax{
+    display: inline-block;
+}
+
+#field{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    width: 5em;
+}
+
+#tekst{
+    position: relative;
+    margin-left: 2em;
+}
+
+#Paste{
+    position: relative;
+    top: 1em;
+    left: 2em;
+    font-size: 2em;
+    color:white;}
+}

@@ -3,10 +3,9 @@
 		<head> 
 			<title>MAKbin</title> 
 			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" /> 
-			<link type="text/CSS" rel="stylesheet" href="css/login.css" /> 
 
 		</head> 
-				<body> 
+		<body> 
 			<div id="header"> 
 				<div id="login"> 
 					<a href="signup.html">signup</a> 
@@ -16,7 +15,7 @@
 				</div> 
 				<span id="logo">MAKbin</span> 
 		
-				<div id="menu"> 
+				<div ID="menu"> 
 					<a href="paste.html">Create paste</a> 
 				
 					<a href="archive.html">Archive</a> 
@@ -26,19 +25,22 @@
 				</div> 
 			</div> 
 			<div id="main"> 
-                <div id="loginnupud"> 
-					<div>Username:
-                    <div id="usernamefield"> </div>
-                    </div>
-                    
-                    <div>
-                    Password: <div id="usernamefield">  </div>
-                    </div>
-		        </div> 
-                <div id="login2"> 
-					<a href="forgot.html">Forgot Password</a> 
-					<a href="paste.html">Log in</a> 
-				</div> 
+			
+				<form id="forgot_passwd" method="post">
+					<div>
+						<label for="username" >Username</label>
+						<input id="username" type="text" />
+					</div>
+					<div>
+						<label for="e-mail" >E-mail</label>
+						<input id="e-mail" type="text" />
+					</div>
+					
+					<div>
+						<input id="send_passwd" type="button" value="Send new password">
+					</div>
+					
+				</form>
 	
 			</div> 
 			<div id="footer"> 

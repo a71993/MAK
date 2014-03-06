@@ -1,0 +1,22 @@
+#loginnupud{
+    position: relative;
+    top: 10em;
+    left: 15em;
+    display: inline-block;
+     color: white;
+}
+
+#usernamefield{
+    position: absolute;
+    left: 6em;
+    display: inline-block;
+    background-color: white;
+    width: 10em;
+    height: 1em;
+}
+
+#login2{
+    position: relative;
+    top: 11em;
+    left: 21.5em;
+}
