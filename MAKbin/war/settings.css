@@ -1,0 +1,80 @@
+#header{
+	background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+	width: 50em;
+	height:10em;	
+}
+#main{
+    background-color:black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom:1em;
+	width: 50em;
+    height: 100em;
+}
+#footer{
+	background-color: red;
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo{
+    position:relative;
+    color:yellow;
+    top: 1em;
+    left: 1em;
+    font-size: 2em;
+    right:0em;
+}
+
+#menu{
+    position: relative;
+    top:6em;
+    left:10em;    
+}
+
+#login{
+      position: relative;
+      margin-right:1em;
+      margin-top:1em;
+      float:right;    
+}
+
+#footer_info {
+    position:relative;
+    text-align:center;        
+}
+
+#loginnupud{
+    position: relative;
+    top: 10em;
+    left: 15em;
+    display: inline-block;
+    color: white;
+}
+
+#field{
+    position: absolute;
+    left: 10em;
+    display: inline-block;
+    background-color: white;
+    width: 10em;
+    height: 1em;    
+}
+
+
+#forgotsubmit{
+    position: relative;
+    top: 11em;
+    left: 32em;
+}
+
+#settings{
+    position: relative;
+    top: 2em;
+    left: 2em;
+    font-size: 2em;
+    color:white;
+}
