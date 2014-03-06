@@ -1,8 +1,8 @@
 	<!doctype html> 
 	<html> 
 		<head> 
-			<title>MAKbin</title> 
-			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" /> 
+			<title>MAKbin</title>
+			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
 			<link type="text/CSS" rel="stylesheet" href="css/settings.css" /> 
 
 		</head> 
@@ -25,25 +25,38 @@
 	
 				</div> 
 			</div> 
-			<div id="main"> 
-                <p id="settings"> Settings </p>
-                <div id="loginnupud"> 
-					<div id="username1">Old password:
-                    <div id="field"> </div>
-                    </div>
-                    <div id="password1">New password : <div id="field">  </div>
-                    </div>
-                    <div id="password1">New password again: <div id="field">  </div>
-                    </div>
-		        </div> 
-                <div id="forgotsubmit"> 
+			<div id="main">
+
+		<form id="my_settings" method="post">
+            <div id="setting_nupud"> 
+            <div>            
+			<label for="old_username" >Old password:</label>
+			<input id="password" type="text" />
+		    </div>
+			<div>
+			    <label for="new_password" >New password:</label>
+			    <input id="password" type="text" />
+			</div>
+            <div>
+			    <label for="new_password_again" >New password again:</label>
+			    <input id="password" type="text" />
+			</div>
 			
-					<a href="login.html">Submit</a> 
-			
-				</div> 
                 
+            
+			
+			<div id="submit2">
+			    <input id="submit" type="button" value="Submit">
+			</div>
+                </div>
+               
+                 
 	
+			</form>
 			</div> 
+
+
+
 			<div id="footer"> 
 				<p id="footer_info">2014 adkasjdlkasjdslkj</p> 
 			</div> 

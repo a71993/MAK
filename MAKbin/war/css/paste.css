@@ -1,11 +1,42 @@
-
-#nupurida{
+#setting_nupud{
     position: relative;
-    left: 6em;
-    color: white;
-    background-color: blue;
-    width: 15em;
-    text-align: center;
+    top: 15em;
+    left: 20em;
+    display: inline-block;
+    
+}
+#forgot{
+    position: absolute;
+    display: inline-block;
+    left: 3em; 
+    top: 4em;
+}
+#submit2{
+    position: absolute;
+    display: inline-block;
+    left: 14em;
+    top: 4em;    
+}
+
+
+#password{
+    position: absolute;
+    height: 25em;
+    width: 54em;
+}
+
+#Paste{
+    position: relative;
+    top: 1em;
+    left: 2em;
+    font-size: 2em;
+    }
+
+#syntaxnupud{
+    position: relative;
+    top: 1em;
+    left: 5em;
+    
 }
 
 #pastefield{
@@ -18,48 +49,47 @@
     height: 20em;
 }
 
+#tekst{
+    position: relative;
+    left: 7em;
+    top: 2em;    
+}
+
 #preview{
    position: relative;
-   left: 6em;
-   top: 2em;
+   left: 7em;
+   top: 21em;
    display: inline-block;   
    background-color: grey;
    width: 75%;
    height: 15em;
 }
-#submit{
+#Preview2{
     position: relative;
-    top: 3em;
-    left: 40em;
-}
-
-#syntaxnupud{
-    position: relative;
-    top: 3em;
-    left: 6em;
-    color: white;
-}
-
-#syntax{
-    display: inline-block;
-}
-
-#field{
-    display: inline-block;
-    background-color: white;
-    color: black;
-    width: 5em;
-}
-
-#tekst{
-    position: relative;
-    margin-left: 2em;
-}
-
-#Paste{
-    position: relative;
-    top: 1em;
+    top: 11em;
     left: 2em;
     font-size: 2em;
-    color:white;}
+}
+#tekst2{
+    position: relative;
+    top:1em;
+    left:2em;
+}
+
+#submit2{
+    position: relative;
+    top: 22em;
+    left:48em;
+    display: inline-block;
+    border: 2px solid #6495ED;
+    border-radius: 2em;
+    width: 4em;
+    background-color: #BCD2EE;
+    text-align: center;
+}
+#syntax{
+    position: relative;
+    top: 22em;
+    display: inline-block;
+    left: 2em;
 }

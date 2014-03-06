@@ -1,32 +1,25 @@
-
-#loginnupud{
+#setting_nupud{
     position: relative;
-    top: 10em;
-    left: 15em;
+    top: 15em;
+    left: 20em;
     display: inline-block;
-    color: white;
+    
 }
-
-#field{
+#forgot{
     position: absolute;
-    left: 10em;
     display: inline-block;
-    background-color: white;
-    width: 10em;
-    height: 1em;    
+    left: 3em; 
+    top: 4em;
+}
+#submit2{
+    position: absolute;
+    display: inline-block;
+    left: 14em;
+    top: 4em;    
 }
 
 
-#forgotsubmit{
-    position: relative;
-    top: 11em;
-    left: 32em;
-}
-
-#settings{
-    position: relative;
-    top: 2em;
-    left: 2em;
-    font-size: 2em;
-    color:white;
+#password{
+    position: absolute;
+    left: 11em;
 }

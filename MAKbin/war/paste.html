@@ -1,8 +1,8 @@
 	<!doctype html> 
 	<html> 
 		<head> 
-			<title>MAKbin</title> 
-			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" /> 
+			<title>MAKbin</title>
+			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
 			<link type="text/CSS" rel="stylesheet" href="css/paste.css" /> 
 
 		</head> 
@@ -25,21 +25,22 @@
 	
 				</div> 
 			</div> 
-			<div id="main"> 
+			<div id="main">
+                <form id="my_settings" method="post">
+                    
+                    
                 <p id="Paste"> Paste </p>
-                <div id="nupurida"> ...........nupurida........... </div>
-                <div id="pastefield"> 
-                   <div id="tekst">
-                    <p>kommentaarid......{ </p>
-                        <p> rida </p>
-                        <p> rida </p>
-                        <p> rida }</p>
-                    </div>
-                </div> 
+                <input id="syntaxnupud" type="button" value="Nupud">
+                    
                 
-                <p id="Paste"> Preview</p>
+                    <div id="tekst">
+			        <input id="password" type="text" />
+                    </div>
+                
+                
+                <p id="Preview2"> Preview</p>
                  <div id="preview"> 
-                     <p id="tekst">     kommentaarid........</p>
+                     <p id="tekst2">     kommentaarid........</p>
                      
                     <ol id="tekst">
                         <li> rida </li>
@@ -47,21 +48,32 @@
                         <li> rida </li>
                      </ol>
 		        </div> 
-                <div id="syntaxnupud"> 
-                    <div id="syntax"> syntax:
-                        <div id="field"> Python
-                        </div>
+                <div id="syntaxnupud">  
+                    
+                    <div id="syntax">
+                        <label for="Syntax" >Syntax:</label>
+                        <select>
+                          <option value="HTML">HTML</option>
+                          <option value="C++">C++</option>
+                          <option value="Python">Python</option>
+                          <option value="Java" selected>Java</option>
+                    </select>
                     </div>
-                    <div id="syntax"> exposure:
-                        <div id="field"> Public
-                        </div>
+                    
+                    <div id="syntax">
+                        <label for="Exposure" >Exposure:</label>
+                        <select>
+                          <option value="Public">Public</option>
+                          <option value="Private">Private</option>
+                        </select> 
                     </div>
                 </div>
-                <div id="submit"> 
-				 	<a href="view.html">Submit</a> 
+                <div id="submit2">
+                   
+				 	<a href="view.html"> Submit</a> 
 				</div> 
                 
-	
+                </form>	
 			</div> 
 			<div id="footer"> 
 				<p id="footer_info">2014 adkasjdlkasjdslkj</p> 

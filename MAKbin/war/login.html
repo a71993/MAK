@@ -2,11 +2,11 @@
 	<html> 
 		<head> 
 			<title>MAKbin</title> 
-			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" /> 
+			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
 			<link type="text/CSS" rel="stylesheet" href="css/login.css" /> 
+		</head>
 
-		</head> 
-				<body> 
+		<body> 
 			<div id="header"> 
 				<div id="login"> 
 					<a href="signup.html">signup</a> 
@@ -25,26 +25,40 @@
 	
 				</div> 
 			</div> 
-			<div id="main"> 
-                <div id="loginnupud"> 
-					<div>Username:
-                    <div id="usernamefield"> </div>
-                    </div>
-                    
-                    <div>
-                    Password: <div id="usernamefield">  </div>
-                    </div>
-		        </div> 
-                <div id="login2"> 
-					<a href="forgot.html">Forgot Password</a> 
-					<a href="paste.html">Log in</a> 
-				</div> 
+			<div id="main">
+
+		<form id="sign_up" method="post">
+            <div id="loginnupud"> 
+            <div>            
+			<label for="username" >Username</label>
+			<input id="username" type="text" />
+		    </div>
+			<div>
+			    <label for="password" >Password</label>
+			    <input id="password" type="text" />
+			</div>
+			
+                
+            
+			<div id="forgot">
+			    <input id="forgot_password" type="button" value="Forgot password">
+			</div>
+			<div id="login2">
+			    <input id="log_in" type="button" value="Log in">
+			</div>
+                </div>
+               
+                 
 	
+			</form>
 			</div> 
+
+
+
 			<div id="footer"> 
 				<p id="footer_info">2014 adkasjdlkasjdslkj</p> 
 			</div> 
-		</body> 
+		</body>  
 	</html> 
 	
 
