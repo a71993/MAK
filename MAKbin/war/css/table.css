@@ -1,0 +1,15 @@
+#pastetable {
+	border: 1px solid green;
+	padding: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+	
+}
+
+#pastetable td { 
+	padding: 1em;
+	border: 1px solid green;
+	text-align: center;
+}
+
