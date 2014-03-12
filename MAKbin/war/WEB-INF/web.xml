@@ -16,9 +16,11 @@
     <url-pattern>/makbin/greet</url-pattern>
   </servlet-mapping>
   
+
+  
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>MAKbin.html</welcome-file>
+    <welcome-file>paste.html</welcome-file>
   </welcome-file-list>
 
 </web-app>
