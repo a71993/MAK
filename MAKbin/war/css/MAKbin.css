@@ -37,15 +37,17 @@ body{
     right:0em;
 
 }
-#menu{
+.menu{
+	height:auto;
     position: relative;
     text-align:center;
-    top:2em;
+    top:2em;  
+    
 }
 
-}
+
 	
-}
+
 #login{
       position: relative;
       margin-right:1em;

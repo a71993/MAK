@@ -11,11 +11,11 @@
     left: 3em; 
     top: 4em;
 }
-#submit2{
+#submit{
     position: absolute;
     display: inline-block;
-    left: 14em;
     top: 4em;    
+    border:1em;
 }
 
 
