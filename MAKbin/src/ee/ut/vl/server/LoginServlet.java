@@ -1,16 +1,17 @@
 package ee.ut.vl.server;
 
-    import java.io.IOException;  
-    import java.io.PrintWriter;  
-      
-    import javax.servlet.RequestDispatcher;  
-    import javax.servlet.ServletException;  
-    import javax.servlet.http.HttpServlet;  
-    import javax.servlet.http.HttpServletRequest;  
-    import javax.servlet.http.HttpServletResponse;  
+    import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
       
       
     public class LoginServlet extends HttpServlet {  
+    	
     public void doPost(HttpServletRequest request, HttpServletResponse response)  
             throws ServletException, IOException {  
       
@@ -21,7 +22,7 @@ package ee.ut.vl.server;
         String p=request.getParameter("password");  
               
         if(LoginValidator.validate(n, p)){  
-            RequestDispatcher rd=request.getRequestDispatcher("servlet2");  
+            RequestDispatcher rd=request.getRequestDispatcher("paste.html");  
             rd.forward(request,response);  
         }  
         else{  

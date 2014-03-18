@@ -7,13 +7,23 @@
 
   <!-- Servlets -->
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>ee.ut.vl.server.GreetingServiceImpl</servlet-class>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>ee.ut.vl.server.LoginServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/makbin/greet</url-pattern>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>ee.ut.vl.server.RegisterServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/signup</url-pattern>
   </servlet-mapping>
   
 
