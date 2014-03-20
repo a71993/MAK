@@ -2,12 +2,14 @@
 	<html> 
 		<head> 
 			<title>MAKbin</title>
+			<meta charset="utf-8"/>
 			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
 			<link type="text/CSS" rel="stylesheet" href="css/paste.css" />
 			<script src="http://connect.facebook.net/en_US/all.js"></script>
 			<script type="text/javascript" src="js/FBlogin.js"> </script>
 
-		</head> 
+		</head>
+		
 	<body> 
 			<div id="fb-root"></div>
 			<div id="header"> 
@@ -15,7 +17,9 @@
 					<a href="signup.html">signup</a> 
 			
 					<a href="login.html">login</a>
-					<fb:login-button id="fb-button" show-faces="false" perms="user_hometown,user_about_me,email,user_address" autologoutlink="true"></fb:login-button>
+					<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+					
+					
 			
 				</div> 
 				<span id="logo">MAKbin</span> 
@@ -28,7 +32,7 @@
 					<a href="settings.html">My settings</a> 
 	
 				</div> 
-			</div> 
+			</div>
 			<div id="main">
                 <form id="my_settings" method="post">
                     
@@ -46,17 +50,17 @@
                  <div id="preview"> 
                      <p id="tekst2">     kommentaarid........</p>
                      
-                    <ol id="tekst">
+                    <ol id="tekst3">
                         <li> rida </li>
                         <li> rida </li>
                         <li> rida </li>
                      </ol>
 		        </div> 
-                <div id="syntaxnupud">  
+                <div id="syntaxnupud2">  
                     
-                    <div id="syntax">
+                    <div id="syntax2">
                         <label for="Syntax" >Syntax:</label>
-                        <select>
+                        <select id="Syntax">
                           <option value="HTML">HTML</option>
                           <option value="C++">C++</option>
                           <option value="Python">Python</option>
@@ -64,9 +68,9 @@
                     </select>
                     </div>
                     
-                    <div id="syntax">
+                    <div id="syntax1">
                         <label for="Exposure" >Exposure:</label>
-                        <select>
+                        <select id="Exposure">
                           <option value="Public">Public</option>
                           <option value="Private">Private</option>
                         </select> 
