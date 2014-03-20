@@ -1,0 +1,28 @@
+#loginnupud{
+    position: relative;
+    top: 15em;
+    left: 20em;
+    display: inline-block;
+    
+}
+#forgot{
+    position: absolute;
+    display: inline-block;
+    left: 3em; 
+    top: 4em;
+}
+#login2{
+    position: absolute;
+    display: inline-block;
+    left: 11em;
+    top: 4em;    
+}
+#username{
+    position: absolute;
+    left: 6em;
+}
+
+#password{
+    position: absolute;
+    left: 6em;
+}

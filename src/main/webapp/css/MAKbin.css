@@ -1,0 +1,63 @@
+body{
+	background-color: #01939A;
+}
+#header{
+	background: linear-gradient(#006064, #5DC8CD);
+	margin-top: -1em;
+    margin-left: auto;
+    margin-right:auto;
+	height:10em;	
+	border-bottom-right-radius:1em;
+	border-bottom-left-radius:1em;
+	
+}
+#main{
+    background-color: #5DC8CD;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom:1em;
+	width: 60em;
+    height: 60em;
+    box-shadow: 1em 0em 0.5em 0em rgba(0,96,100,0.5), -1em 0em 0.5em 0em rgba(0,96,100,0.5);
+}
+#footer{
+	background-color: #006064;
+
+}
+#logo{
+    position:relative;
+    color: #5DC8DC;
+    font-family: Impact;
+    text-shadow: 0em 0.05em 0.05em #006064;
+    vertical-align:middle;
+    left: 0.5em;
+    top: 0.5em;
+    font-size: 4em;
+    right:0em;
+
+}
+.menu{
+	height:auto;
+    position: relative;
+    text-align:center;
+    top:2em;  
+    
+}
+
+
+	
+
+#login{
+      position: relative;
+      margin-right:1em;
+      margin-top:1em;
+      float:right;
+
+    
+}
+#footer_info {
+
+    position:relative;
+    text-align:center;        
+}

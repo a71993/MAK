@@ -1,0 +1,25 @@
+#setting_nupud{
+    position: relative;
+    top: 15em;
+    left: 20em;
+    display: inline-block;
+    
+}
+#forgot{
+    position: absolute;
+    display: inline-block;
+    left: 3em; 
+    top: 4em;
+}
+#submit{
+    position: absolute;
+    display: inline-block;
+    top: 4em;    
+    border:1em;
+}
+
+
+#password{
+    position: absolute;
+    left: 11em;
+}
