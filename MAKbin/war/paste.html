@@ -3,15 +3,19 @@
 		<head> 
 			<title>MAKbin</title>
 			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
-			<link type="text/CSS" rel="stylesheet" href="css/paste.css" /> 
+			<link type="text/CSS" rel="stylesheet" href="css/paste.css" />
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script type="text/javascript" src="js/FBlogin.js"> </script>
 
 		</head> 
 	<body> 
+			<div id="fb-root"></div>
 			<div id="header"> 
 				<div id="login"> 
 					<a href="signup.html">signup</a> 
 			
-					<a href="login.html">login</a> 
+					<a href="login.html">login</a>
+					<fb:login-button id="fb-button" show-faces="false" perms="user_hometown,user_about_me,email,user_address" autologoutlink="true"></fb:login-button>
 			
 				</div> 
 				<span id="logo">MAKbin</span> 

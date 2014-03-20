@@ -13,11 +13,13 @@
 
 		<body> 
 			<div id="header"> 
+				
 				<div id="login"> 
+					
 					<a href="signup.html">signup</a> 
 			
 					<a href="login.html">login</a> 
-			
+					<fb:login-button id="fb-button" show-faces="false" perms="user_hometown,user_about_me,email,user_address" autologoutlink="true"></fb:login-button>
 				</div> 
 				<span id="logo">MAKbin</span> 
 		
@@ -40,12 +42,13 @@
 			    <label for="password" >Password</label>
 			    <input id="password" name="password" type="text" /> <br />
 			    <input id="forgot_password" type="button" value="Forgot password"/>
-			    <fb:login-button id="fb-button" autologoutlink="true"></fb:login-button>
-				
+			    
+				<a href= "http://graph.facebook.com/FACEBOOK_USER_ID/picture"></a>
 			    <input id="log_in" type="submit" value="Log in"/> <br />
 			    
 			</form>
 			<div id="fb-root"></div>
+			
 			</div> 
 
 

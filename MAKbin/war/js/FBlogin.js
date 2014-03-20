@@ -10,3 +10,6 @@ FB.init({appId: '1408127162785258', status: true, cookie: true, xfbml: true});
   FB.Event.subscribe('auth.login', function(resp) {
         window.location = 'http://makbin2014.appspot.com/archive.html';
     });
+  
+  
+  
