@@ -1,17 +1,25 @@
 	<!doctype html> 
 	<html> 
 		<head> 
-			<title>MAKbin</title> 
+			<title>MAKbin</title>
+			<meta charset="utf-8"/> 
 			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" /> 
-			<link type="text/CSS" rel="stylesheet" href="css/form.css" /> 
+			<link type="text/CSS" rel="stylesheet" href="css/form.css" />
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script type="text/javascript" src="js/FBlogin.js"> </script>
 
-		</head> 
+		</head>
+		
 		<body> 
+			<div id="fb-root"></div>
 			<div id="header"> 
 				<div id="login"> 
 					<a href="signup.html">signup</a> 
 			
-					<a href="login.html">login</a> 
+					<a href="login.html">login</a>
+					<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+					
+					
 			
 				</div> 
 				<span id="logo">MAKbin</span> 
@@ -19,7 +27,7 @@
 				<div class="menu"> 
 					<a href="paste.html">Create paste</a> 
 				
-					<a href="archive.html">Archive</a> 
+					<a href="/mypastes">Archive</a> 
 				
 					<a href="settings.html">My settings</a> 
 	

@@ -87,7 +87,14 @@
     background-color: #BCD2EE;
     text-align: center;
 }
-#syntax{
+#syntax2{
+    position: relative;
+    top: 22em;
+    display: inline-block;
+    left: 2em;
+}
+
+#syntax1{
     position: relative;
     top: 22em;
     display: inline-block;

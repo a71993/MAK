@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 		}
 		else{  
 			out.print("Sorry username or password error");
-			RequestDispatcher rd=request.getRequestDispatcher("index.html");
+			RequestDispatcher rd=request.getRequestDispatcher("signup.html");
 			rd.include(request,response);
 		}
 		

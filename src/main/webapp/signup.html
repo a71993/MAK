@@ -1,17 +1,28 @@
 	<!doctype html> 
 	<html> 
 		<head> 
-			<title>MAKbin</title> 
+			<title>MAKbin</title>
+			<meta charset="utf-8"/>
 			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" /> 
-			<link type="text/CSS" rel="stylesheet" href="css/form.css" /> 
+			<link type="text/CSS" rel="stylesheet" href="css/form.css" />
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script type="text/javascript" src="js/FBlogin.js"> </script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+			<script type="text/javascript" src="js/reg_test.js"></script>
+			
 
-		</head> 
-		<body> 
+		</head>
+		 
+		<body>
+			<div id="fb-root"></div>
 			<div id="header"> 
 				<div id="login"> 
 					<a href="signup.html">signup</a> 
 			
-					<a href="login.html">login</a> 
+					<a href="login.html">login</a>
+					<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+					
+					
 			
 				</div> 
 				<span id="logo">MAKbin</span> 
@@ -19,7 +30,7 @@
 				<div class="menu"> 
 					<a href="paste.html">Create paste</a> 
 				
-					<a href="archive.html">Archive</a> 
+					<a href="/mypastes">Archive</a> 
 				
 					<a href="settings.html">My settings</a> 
 	
@@ -28,16 +39,16 @@
 			<div id="main"> 
 			
 				<div class="form">
-					<form id="forgot_passwd" method="post">
+					<form id="forgot_passwd" method="post" action="/signup">
 					
 							<label for="username" >Username</label>
 							<input id="username" name="username" type="text" /> <br />
 
-							<label for="e-mail1" >E-mail</label>
-							<input id="e-mail1" name="e-mail1" type="text" /> <br />
+							<label for="email1" >E-mail</label>
+							<input id="email1" name="email1" type="text" /> <br />
 							
 							<label for="e-mail2" >Confirm e-mail</label>
-							<input id="e-mail2" name="e-mail2" type="text" /> <br />
+							<input id="email2" name="email2" type="text" /> <br />
 							
 							<label for="password1" >Password</label>
 							<input id="password1" name="password1" type="text" /> <br />

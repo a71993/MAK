@@ -1,7 +1,12 @@
-package com.example;
+package ee.ut.vl;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  * 
@@ -17,6 +22,7 @@ public class Main {
      */
     public static void main(String[] args) throws Exception{
         String webappDirLocation = "src/main/webapp/";
+        Connection connection = getConnection();
         
         //The port that we should run on can be set into an environment variable
         //Look for that variable and default to 8080 if it isn't there.
@@ -43,6 +49,17 @@ public class Main {
         
         server.start();
         server.join();   
+        
+    }
+    
+    private static Connection getConnection() throws URISyntaxException, SQLException {
+        URI dbUri = new URI(System.getenv("DATABASE_URL"));
+
+        String username = dbUri.getUserInfo().split(":")[0];
+        String password = dbUri.getUserInfo().split(":")[1];
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
+
+        return DriverManager.getConnection(dbUrl, username, password);
     }
 
 }

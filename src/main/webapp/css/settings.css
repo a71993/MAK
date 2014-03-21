@@ -14,12 +14,23 @@
 #submit{
     position: absolute;
     display: inline-block;
-    top: 4em;    
+    top: 24em;
+    left: 47em;    
     border:1em;
 }
 
 
-#password{
+#old_username{
     position: absolute;
-    left: 11em;
+    left: 50em;
+}
+
+#new_password{
+    position: absolute;
+    left: 50em;
+}
+
+#new_password_again{
+    position: absolute;
+    left: 50em;
 }
