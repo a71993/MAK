@@ -1,8 +1,8 @@
 function isempty(){
 	
 	var value1= document.getElementById("username").value;
-	var value2= document.getElementById("e-mail1").value;
-	var value3= document.getElementById("e-mail2").value;
+	var value2= document.getElementById("email1").value;
+	var value3= document.getElementById("email2").value;
 	var value4= document.getElementById("password1").value;
 	var value5= document.getElementById("password2").value;
 	
@@ -37,13 +37,14 @@ function isempty(){
 	//kui k�ik on korras 
 	else {
 		alert("K�ik on korrektne!!");
+		document.forgot_passwd.submit();
 		return true;
 	}
 }
 
 
-$('#forgot_passwd').submit(function() {
-	return isempty();
-});
+//$('#forgot_passwd').submit(function() {
+//	return isempty();
+//});
 
 

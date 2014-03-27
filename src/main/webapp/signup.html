@@ -39,7 +39,7 @@
 			<div id="main"> 
 			
 				<div class="form">
-					<form id="forgot_passwd" method="post" action="/signup">
+					<form id="forgot_passwd" name="forgot_passwd" method="post" action="/signup">
 					
 							<label for="username" >Username</label>
 							<input id="username" name="username" type="text" /> <br />
@@ -56,7 +56,7 @@
 							<label for="password2" >Confirm password</label>
 							<input id="password2" name="password2" type="text" /> <br />
 						
-							<input id="submitbutton" type="submit" value="Submit" />
+							<input id="submitbutton" type="button" value="Submit" onclick="isempty();"/>
 						
 					</form>
 				</div> <!-- .form end -->
