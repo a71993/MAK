@@ -1,4 +1,4 @@
-package ee.ut.vl;
+package ee.ut.vl.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,6 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import ee.ut.vl.DatabaseUtil;
 
 public class PasteServlet extends HttpServlet{
 	
@@ -53,6 +56,12 @@ public class PasteServlet extends HttpServlet{
 			} catch (SQLException e) {
 				e.printStackTrace(System.out);
 			}
+			HttpSession session=request.getSession();
+		    session.setAttribute("name", name);
+		    session.setAttribute("text", paste);
+
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/view.jsp");
+		    rd.forward(request, response);
 		}
 	}
 	

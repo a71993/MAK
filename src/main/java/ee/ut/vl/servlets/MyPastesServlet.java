@@ -1,7 +1,6 @@
-package ee.ut.vl;
+package ee.ut.vl.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,6 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import ee.ut.vl.DatabaseUtil;
+import ee.ut.vl.resources.Paste;
 
 public class MyPastesServlet extends HttpServlet{
 	
@@ -49,7 +51,7 @@ public class MyPastesServlet extends HttpServlet{
 				paste = new Paste(result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5));
 				pastes.add(paste);
 			}
-			PreparedStatement pst2=con.prepareStatement("select username, count(pastes.id) from users JOIN pastes ON users.id = pastes.user_id where users.username = '" + myUsername + "' group by username");
+			PreparedStatement pst2=con.prepareStatement("select username, count(pastes.id) from users JOIN pastes ON users.id = pastes.user_id where users.username = '" + myUsername + "' GROUP BY username");
 			ResultSet result2 = pst2.executeQuery();
 			result2.next();
 			totalPastes = result2.getInt(2);

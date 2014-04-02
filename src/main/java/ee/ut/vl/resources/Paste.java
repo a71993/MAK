@@ -1,4 +1,4 @@
-package ee.ut.vl;
+package ee.ut.vl.resources;
 
 import java.sql.Timestamp;
 

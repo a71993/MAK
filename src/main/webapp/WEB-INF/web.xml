@@ -11,46 +11,51 @@
     
 
   
-    <servlet>
-    <servlet-name>loginServlet</servlet-name>
-    <servlet-class>ee.ut.vl.LoginServlet</servlet-class>
-  </servlet>
+	<servlet>
+    	<servlet-name>loginServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>loginServlet</servlet-name>
+    	<url-pattern>/login.html</url-pattern>
+	</servlet-mapping>
   
-  <servlet-mapping>
-    <servlet-name>loginServlet</servlet-name>
-    <url-pattern>/login.html</url-pattern>
-  </servlet-mapping>
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+    	<url-pattern>/signup</url-pattern>
+	  </servlet-mapping>
   
-  <servlet>
-    <servlet-name>RegisterServlet</servlet-name>
-    <servlet-class>ee.ut.vl.RegisterServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>RegisterServlet</servlet-name>
-    <url-pattern>/signup</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <servlet-name>PasteServlet</servlet-name>
-    <servlet-class>ee.ut.vl.PasteServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>PasteServlet</servlet-name>
-    <url-pattern>/paste</url-pattern>
-  </servlet-mapping>
+	<servlet>
+    	<servlet-name>PasteServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.PasteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>PasteServlet</servlet-name>
+   		<url-pattern>/paste</url-pattern>
+	</servlet-mapping>
   
 
-  <servlet>
-    <servlet-name>MyPastesServlet</servlet-name>
-    <servlet-class>ee.ut.vl.MyPastesServlet</servlet-class>
-  </servlet>
+	<servlet>
+    	<servlet-name>MyPastesServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.MyPastesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>MyPastesServlet</servlet-name>
+    	<url-pattern>/mypastes</url-pattern>
+	</servlet-mapping>
   
-  <servlet-mapping>
-    <servlet-name>MyPastesServlet</servlet-name>
-    <url-pattern>/mypastes</url-pattern>
-  </servlet-mapping>
+	<servlet>
+    	<servlet-name>ViewServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.ViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>ViewServlet</servlet-name>
+    	<url-pattern>/view</url-pattern>
+	</servlet-mapping>
   
 
 </web-app>

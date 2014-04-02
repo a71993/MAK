@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!doctype html> 
 <html> 
 	<head> 
 		<title>MAKbin</title>
@@ -52,7 +53,7 @@
 				<tbody>
 					<c:forEach var="pastes" items="${pastes}">
 					<tr>
-						<td><c:out value="${pastes.name}"  /></td>
+						<td><a href="/view?name=${pastes.name}"><c:out value="${pastes.name}"  /></a></td>
 						<td><c:out value="${pastes.posted_time}"  /></td>
 						<td><c:out value="${pastes.syntax}"  /></td>
 						<td><c:out value="${pastes.exposure}"  /></td>
