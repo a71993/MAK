@@ -7,6 +7,8 @@
 		<link type="text/CSS" rel="stylesheet" href="css/view.css" />
 		<script src="http://connect.facebook.net/en_US/all.js"></script>
 		<script type="text/javascript" src="js/FBlogin.js"> </script>
+		<script src="js/prism.js"></script>
+		<link href="css/prism.css" rel="stylesheet" />
 
 	</head> 
 	<body>
@@ -36,8 +38,13 @@
 			<h2 id="nameOfPaste">${name}</h2>
 		
 			<div id="view"> 
+			<pre class="line-numbers" data-start="1"><code class="language-java">
+			
 				${text}
-	       	</div> 
+				</code>
+	       	</pre>
+	       	</div>
+	       	
 	       	<div id="viewbuttons">
 	       		<form>
 	       			<input id="editPaste" type="button" value="Edit" />
