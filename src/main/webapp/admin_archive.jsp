@@ -1,4 +1,4 @@
-	<!doctype html> 
+﻿	<!doctype html> 
 	<html> 
 		<head> 
 			<title>MAKbin</title>
@@ -29,7 +29,7 @@
 				
 					<a href="/mypastes">Archive</a> 
 				
-					<a href="setting.html">My settings</a> 
+					<a href="settings.html">My settings</a> 
 	
 				</div> 
 			</div>
@@ -37,7 +37,7 @@
 			
 				<a href="/mypastes">My Archive</a> 
 				
-				<a href="admin_archive.jsp">Others</a> 
+				<a href="/mypastes">Others</a> 
 			
 				<table id="pastetable">
 					<thead>

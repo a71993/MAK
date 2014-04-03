@@ -37,7 +37,7 @@
 		
 			<a href="/mypastes">My Archive</a> 
 			
-			<a href="admin_archive.jsp">Others</a> 
+			<a href="/mypastes">Others</a> 
 			
 			<p>Mul on kleepse kokku: <c:out value="${totalPastes}"  /></p>
 		
