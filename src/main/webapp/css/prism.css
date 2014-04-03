@@ -218,15 +218,15 @@ pre.line-numbers > code {
 }
 
 .token.tab:not(:empty):before {
-	content: '‚ñ∏';
+	content: '>>';
 }
 
 .token.cr:before {
-	content: '‚?ç';
+	content: ' . ';
 }
 
 .token.lf:before {
-	content: '‚??';
+	content: '§';
 }
 .token a {
 	color: inherit;
