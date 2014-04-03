@@ -12,11 +12,15 @@ public class Paste {
 	private String syntax;;
 	private String exposure;
 	
+
+	private String urlName;
+	
 	
 	public Paste(){}
 	
-	public Paste(String name, String text, Timestamp posted_time, String syntax,
+	public Paste(String urlName, String name, String text, Timestamp posted_time, String syntax,
 			String exposure) {
+		this.urlName = urlName;
 		this.name = name;
 		this.text = text;
 		this.posted_time = posted_time;
@@ -69,5 +73,13 @@ public class Paste {
 		this.exposure = exposure;
 	}
 	
+	
+	public String getUrlName() {
+		return urlName;
+	}
+
+	public void setUrlName(String urlName) {
+		this.urlName = urlName;
+	}
 	
 }

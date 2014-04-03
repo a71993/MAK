@@ -1,6 +1,7 @@
 package ee.ut.vl.servlets;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -48,7 +49,7 @@ public class MyPastesServlet extends HttpServlet{
 		    PreparedStatement pst1=con.prepareStatement("SELECT name, paste, posted_time, syntax, exposure FROM pastes JOIN users ON users.id = pastes.user_id WHERE users.username = '" + myUsername + "' ORDER BY posted_time DESC");
 			ResultSet result1 = pst1.executeQuery();
 			while(result1.next()){
-				paste = new Paste(result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5));
+				paste = new Paste(URLEncoder.encode(result1.getString(1),"utf-8"), result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5));
 				pastes.add(paste);
 			}
 			PreparedStatement pst2=con.prepareStatement("select username, count(pastes.id) from users JOIN pastes ON users.id = pastes.user_id where users.username = '" + myUsername + "' GROUP BY username");
