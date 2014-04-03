@@ -5,6 +5,18 @@
     display: inline-block;
     
 }
+
+#main{
+    position: relative;
+    height: 60em;
+}
+
+#nimi{
+    position: relative;
+    left: 7em;
+    width: 54em;
+}
+
 #forgot{
     position: absolute;
     display: inline-block;
@@ -58,15 +70,15 @@
 #preview{
    position: relative;
    left: 7em;
-   top: 21em;
+   top: 1em;
    display: inline-block;   
    background-color: grey;
    width: 75%;
-   height: 15em;
+   height: auto;
 }
 #Preview2{
     position: relative;
-    top: 11em;
+    top: 1em;
     left: 2em;
     font-size: 2em;
 }
@@ -78,7 +90,7 @@
 
 #submit2{
     position: relative;
-    top: 22em;
+    top: 2em;
     left:48em;
     display: inline-block;
     border: 2px solid #6495ED;
@@ -89,14 +101,14 @@
 }
 #syntax2{
     position: relative;
-    top: 22em;
+    top: 2em;
     display: inline-block;
     left: 2em;
 }
 
 #syntax1{
     position: relative;
-    top: 22em;
+    top: 2em;
     display: inline-block;
     left: 2em;
 }
