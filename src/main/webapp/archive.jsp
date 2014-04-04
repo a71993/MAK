@@ -17,7 +17,7 @@
 			<div id="login"> 
 			
 				<form id="logout" method="post" action="/logout">
-					<input type="submit" id="logout" value="logout" />
+					<input type="submit" id="logoutbutton" value="logout" />
 				</form>
 								
 				<a href="signup.html">signup</a> 
