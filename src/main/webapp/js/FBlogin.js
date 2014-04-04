@@ -16,7 +16,7 @@
   });
   
   FB.Event.subscribe('auth.login', function(resp) {
-        window.location = 'http://makbin2014.appspot.com/archive.html';
+        window.location = 'http://makbin-heroku.herokuapp.com/mypastes';
     });
   
   
