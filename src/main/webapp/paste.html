@@ -7,7 +7,8 @@
 			<link type="text/CSS" rel="stylesheet" href="css/paste.css" />
 			<script src="http://connect.facebook.net/en_US/all.js"></script>
 			<script type="text/javascript" src="js/FBlogin.js"> </script>
-
+			<script type="text/javascript" src="js/textbox.js"> </script>
+			
 		</head>
 		
 	<body> 
@@ -51,7 +52,7 @@
                     
                 
                     <div id="tekst">
-                    <textarea name="paste" rows="30" cols="90">
+                    <textarea id="tekstibox" name="paste" rows="30" cols="90" onkeydown=displayit()>
 			        
                     </textarea>
                     </div>
@@ -59,13 +60,8 @@
                 
                 <p id="Preview2"> Preview</p>
                  <div id="preview"> 
-                     <p id="tekst2">     kommentaarid........</p>
+                     <p id="tekst2"></p>
                      
-                    <ol id="tekst3">
-                        <li> rida </li>
-                        <li> rida </li>
-                        <li> rida </li>
-                     </ol>
 		        </div> 
                 <div id="syntaxnupud2">  
                     
