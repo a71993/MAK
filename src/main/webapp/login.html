@@ -15,7 +15,11 @@
 		<body> 
 			<div id="header"> 
 				
-				<div id="login"> 
+				<div id="login">
+				
+					<form id="logout" method="post" action="/logout">
+						<input type="submit" id="logout" value="logout" />
+					</form>
 					
 					<a href="signup.html">signup</a> 
 			
@@ -31,20 +35,20 @@
 				
 					<a href="/mypastes">Archive</a> 
 				
-					<a href="settings.html">My settings</a> 
+					<a href="settings.jsp">My settings</a> 
 	
 				</div> 
 			</div> 
 			<div id="main">
 
-		<form id="sign_up" class="form" method="post">
+		<form id="sign_up" class="form" method="post" action="/login">
                        
 			<label for="username" >Username</label>
 			<input id="username" name="username" type="text" /> <br />
 		    
 			    <label for="password" >Password</label>
 			    <input id="password" name="password" type="text" /> <br />
-			    <input id="forgot_password" type="button" value="Forgot password"/>
+			    <a id="forgot_password" href="/forgot.html">Forgot password?</a>
 			    
 				<a href= "http://graph.facebook.com/FACEBOOK_USER_ID/picture"></a>
 			    <input id="log_in" type="submit" value="Log in"/> <br />

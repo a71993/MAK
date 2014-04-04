@@ -41,7 +41,9 @@ public class MyPastesServlet extends HttpServlet{
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-		String myUsername = "kapa";
+		
+		HttpSession session=request.getSession();
+		String myUsername = session.getAttribute("user").toString();
 		List<Paste> pastes = new ArrayList<Paste>();
 		Paste paste = new Paste();
 		int totalPastes = 0;
@@ -59,7 +61,7 @@ public class MyPastesServlet extends HttpServlet{
 		} catch (SQLException e) {
 			e.printStackTrace(System.out);
 		}
-		HttpSession session=request.getSession();
+
 	    session.setAttribute("pastes", pastes);
 	    session.setAttribute("totalPastes", totalPastes);
 

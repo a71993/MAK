@@ -1,4 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!doctype html> 
 <html> 
 	<head> 
@@ -15,6 +15,11 @@
 		<div id="fb-root"></div>
 		<div id="header"> 
 			<div id="login"> 
+			
+				<form id="logout" method="post" action="/logout">
+					<input type="submit" id="logout" value="logout" />
+				</form>
+					
 				<a href="signup.html">signup</a> 
 		
 				<a href="login.html">login</a>
@@ -29,7 +34,7 @@
 			
 				<a href="/mypastes">Archive</a> 
 			
-				<a href="settings.html">My settings</a> 
+				<a href="settings.jsp">My settings</a> 
 				
 			</div> 
 		</div> 

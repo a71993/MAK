@@ -5,9 +5,11 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import ee.ut.vl.LoginValidator;
 
@@ -22,15 +24,21 @@ public class LoginServlet extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String n=request.getParameter("username");
-		String p=request.getParameter("password");
-		if(LoginValidator.validate(n, p)){  
+		String username=request.getParameter("username");
+		String password=request.getParameter("password");
+		if(LoginValidator.validate(username, password)){
+			HttpSession session = request.getSession();
+			session.setAttribute("user", username);
+			session.setMaxInactiveInterval(30*60);
+			Cookie sessionCookie = new Cookie("sessionKuki", username);
+			sessionCookie.setMaxAge(30*60);
+			response.addCookie(sessionCookie);
 			RequestDispatcher rd=request.getRequestDispatcher("paste.html");
 		    rd.forward(request,response);  
 		}
 		else{  
 			out.print("Sorry username or password error");
-			RequestDispatcher rd=request.getRequestDispatcher("signup.html");
+			RequestDispatcher rd=request.getRequestDispatcher("login.html");
 			rd.include(request,response);
 		}
 		

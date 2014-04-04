@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -37,6 +38,9 @@ public class PasteServlet extends HttpServlet{
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
+		
+		HttpSession session=request.getSession();
+		
 		PrintWriter out=response.getWriter();
 		String name=request.getParameter("name");
 		String paste=request.getParameter("paste");
@@ -44,19 +48,22 @@ public class PasteServlet extends HttpServlet{
 		String exposure=request.getParameter("exposure");
 		if(name != "" && paste != "") {
 			try {
-			    PreparedStatement pst=con.prepareStatement("insert into pastes (user_id, name, paste, syntax, exposure) values (?,?,?,?,?)");
-				pst.clearParameters();
-				pst.setInt(1, 2);
-				pst.setString(2, name);
-				pst.setString(3, paste);
-				pst.setString(4, syntax);
-				pst.setString(5, exposure);
-				int i=pst.executeUpdate();
+				PreparedStatement pst1 = con.prepareStatement("select id from users where username = '" + session.getAttribute("user").toString() + "'");
+				ResultSet result = pst1.executeQuery();
+				result.next();
+			    PreparedStatement pst2=con.prepareStatement("insert into pastes (user_id, name, paste, syntax, exposure) values (?,?,?,?,?)");
+				pst2.clearParameters();
+				pst2.setInt(1, result.getInt(1));
+				pst2.setString(2, name);
+				pst2.setString(3, paste);
+				pst2.setString(4, syntax);
+				pst2.setString(5, exposure);
+				int i=pst2.executeUpdate();
 				out.write(i);
 			} catch (SQLException e) {
 				e.printStackTrace(System.out);
 			}
-			HttpSession session=request.getSession();
+
 		    session.setAttribute("name", name);
 		    session.setAttribute("text", paste);
 
