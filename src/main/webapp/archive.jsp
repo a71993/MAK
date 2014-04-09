@@ -1,43 +1,15 @@
+<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html> 
 <html> 
 	<head> 
-		<title>MAKbin</title>
-		<meta charset="utf-8"/>
-		<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
-		<link type="text/CSS" rel="stylesheet" href="css/table.css" />
-		<script src="http://connect.facebook.net/en_US/all.js"></script>
-		<script type="text/javascript" src="js/FBlogin.js"> </script>
+		<jsp:include page="_head.jsp"/>
 
 	</head>
 	 
 	<body>
-		<div id="fb-root"></div>
-		<div id="header"> 
-			<div id="login"> 
-			
-				<form id="logout" method="post" action="/logout">
-					<input type="submit" id="logoutbutton" value="logout" />
-				</form>
-								
-				<a href="signup.html">signup</a> 
+		<jsp:include page="_header.jsp"/>
 		
-				<a href="login.html">login</a>
-				<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
-				
-		
-			</div> 
-			<span id="logo">MAKbin</span> 
-	
-			<div class="menu"> 
-				<a href="paste.html">Create paste</a> 
-			
-				<a href="/mypastes">Archive</a> 
-			
-				<a href="settings.jsp">My settings</a> 
-
-			</div> 
-		</div>
 		<div id="main"> 
 		
 			<a href="/mypastes">My Archive</a> 
@@ -68,9 +40,8 @@
 			</table>
 
 		</div> 
-		<div id="footer"> 
-			<p id="footer_info">2014 adkasjdlkasjdslkj</p> 
-		</div> 
+		
+		<jsp:include page="_footer.jsp"/>
 	</body> 
 </html> 
 

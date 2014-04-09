@@ -33,12 +33,12 @@ public class LoginServlet extends HttpServlet {
 			Cookie sessionCookie = new Cookie("sessionKuki", username);
 			sessionCookie.setMaxAge(30*60);
 			response.addCookie(sessionCookie);
-			RequestDispatcher rd=request.getRequestDispatcher("paste.html");
+			RequestDispatcher rd=request.getRequestDispatcher("paste.jsp");
 		    rd.forward(request,response);  
 		}
 		else{  
 			out.print("Sorry username or password error");
-			RequestDispatcher rd=request.getRequestDispatcher("login.html");
+			RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
 			rd.include(request,response);
 		}
 		
