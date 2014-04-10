@@ -29,15 +29,10 @@
                     </div>
                 
                 
-                <p id="Preview2"> Preview</p>
+               <p id="Preview2"> Preview</p>
                  <div id="preview"> 
-                     <p id="tekst2">     kommentaarid........</p>
+                     <p id="tekst2"></p>
                      
-                    <ol id="tekst3">
-                        <li> rida </li>
-                        <li> rida </li>
-                        <li> rida </li>
-                     </ol>
 		        </div> 
                 <div id="syntaxnupud2">  
                     
