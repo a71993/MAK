@@ -23,7 +23,7 @@
                     
                 
                     <div id="tekst">
-                    <textarea name="paste" rows="30" cols="90">
+                    <textarea id="tekstibox" name="paste" rows="30" cols="90">
 			        
                     </textarea>
                     </div>

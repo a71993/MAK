@@ -1,0 +1,67 @@
+<!-- <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %> -->
+	<!doctype html> 
+	<html> 
+		<head> 
+			<title>MAKbin</title>
+			<meta charset="utf-8"/>
+			<link type="text/CSS" rel="stylesheet" href="css/MAKbin.css" />
+			<link type="text/CSS" rel="stylesheet" href="css/login.css" />
+			<link type="text/CSS" rel="stylesheet" href="css/form.css" />
+			
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script type="text/javascript" src="js/FBlogin.js"> </script>
+			
+		</head>
+		
+		<body> 
+			<div id="fb-root"></div>
+			<div id="header"> 
+				<div id="login"> 
+				
+					<form id="logout" method="post" action="/logout">
+						<input type="submit" id="logoutbutton" value="logout" />
+					</form>
+					
+					<a href="signup.jsp">signup</a> 
+					<a href="login.html">login</a>
+					<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+					
+			
+				</div> 
+				<span id="logo">MAKbin</span> 
+			
+				<div class="menu"> 
+					<a href="paste.jsp">Create paste</a> 	
+					<a href="/mypastes">Archive</a> 	
+					<a href="settings.jsp">My settings</a> 
+			
+				</div> 
+			</div>
+			
+			<div id="main">
+
+		<form id="sign_up" class="form" method="post" action="/login">
+                       
+			<label for="username" >Username</label>
+			<input id="username" name="username" type="text" /> <br />
+		    
+			    <label for="password" >Password</label>
+			    <input id="password" name="password" type="text" /> <br />
+			    <a id="forgot_password" href="/forgot.jsp">Forgot password?</a>
+			    
+				<a href= "http://graph.facebook.com/FACEBOOK_USER_ID/picture"></a>
+			    <input id="log_in" type="submit" value="Log in"/> <br />
+			    
+			</form>
+			<div id="fb-root"></div>
+			
+			</div> 
+
+			<div id="footer"> 
+				<p id="footer_info">2014 MAKbin, Veebirakenduste loomine</p> 
+			</div> 
+			
+		</body>  
+	</html> 
+	
+

@@ -42,8 +42,9 @@ public class SessionFilter implements Filter{
 //		session.getAttribute("user");
 //		Cookie[] cookies = req.getCookies();
 
-		if(session == null && !(uri.endsWith("login.jsp"))){
-			res.sendRedirect("login.jsp");
+		if(session == null && !(uri.endsWith("login.html") || uri.endsWith("login") || uri.endsWith("forgot.jsp") || uri.endsWith("signup.jsp"))){
+			res.sendRedirect("login.html");
+			System.out.print("redirecting to login");
 		}else{
 			chain.doFilter(request, response);
 		}
