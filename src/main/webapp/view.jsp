@@ -23,8 +23,8 @@
 	       	
 	       	<div id="viewbuttons">
 	       		<form>
-	       			<input id="editPaste" type="button" value="Edit" />
-	       			<input id="deletePaste" type="button" value="Delete" />
+	       			<input id="editPaste" type="submit" value="Edit" />
+	       			<input id="deletePaste" type="submit" value="Delete" />
 	       			<input id="copyToClipoard" type="button" value="Copy to Clipboard" />
 	       		</form>
 	       	</div>

@@ -6,6 +6,7 @@ public class Paste {
 	
 	private long id;
 	private int user_id;
+	private String creator;
 	private String name;
 	private String text;
 	private Timestamp posted_time;
@@ -27,6 +28,19 @@ public class Paste {
 		this.syntax = syntax;
 		this.exposure = exposure;
 	}
+
+	public Paste(String urlName, String name, String text, Timestamp posted_time,
+			String syntax, String exposure, String creator) {
+		super();
+		this.creator = creator;
+		this.name = name;
+		this.text = text;
+		this.posted_time = posted_time;
+		this.syntax = syntax;
+		this.exposure = exposure;
+		this.urlName = urlName;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -38,6 +52,12 @@ public class Paste {
 	}
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
+	}
+	public String getCreator() {
+		return creator;
+	}
+	public void setCreator(String creator) {
+		this.creator = creator;
 	}
 	public String getName() {
 		return name;

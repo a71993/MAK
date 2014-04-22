@@ -12,26 +12,25 @@
 			
 			<div id="main"> 
 			
-				<a href="/mypastes">My Archive</a> 
-				
-				<a href="/mypastes">Others</a> 
-			
+	
 				<table id="pastetable">
 					<thead>
 						<tr>
 							<th>Name</th>
 							<th>Posted</th>
 							<th>Syntax</th>
-							<th>Exposure</th>
+							<th>Creator</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>untitled</td>
-							<td>21 seconds ago</td>
-							<td>HTML</td>
-							<td>Public</td>
-						</tr>
+					<c:forEach var="pastes" items="${pastes}">
+					<tr>
+						<td><a href="/view?name=${pastes.urlName}"><c:out value="${pastes.name}"  /></a></td>
+						<td><c:out value="${pastes.posted_time}"  /></td>
+						<td><c:out value="${pastes.syntax}"  /></td>
+						<td><c:out value="${pastes.creator}"  /></td>
+					</tr>
+					</c:forEach>
 					</tbody>
 				</table>
 	

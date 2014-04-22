@@ -11,10 +11,6 @@
 		<jsp:include page="_header.jsp"/>
 		
 		<div id="main"> 
-		
-			<a href="/mypastes">My Archive</a> 
-			
-			<a href="/mypastes">Others</a> 
 			
 			<p>Mul on kleepse kokku: <c:out value="${totalPastes}"  /></p>
 		

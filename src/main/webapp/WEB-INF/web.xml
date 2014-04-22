@@ -6,7 +6,7 @@
     version="2.5">
 
     <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>login.html</welcome-file>
     </welcome-file-list>
     
 
@@ -55,6 +55,15 @@
 	<servlet-mapping>
     	<servlet-name>MyPastesServlet</servlet-name>
     	<url-pattern>/mypastes</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>OtherPastesServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.OtherPastesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>OtherPastesServlet</servlet-name>
+    	<url-pattern>/otherpastes</url-pattern>
 	</servlet-mapping>
   
 	<servlet>

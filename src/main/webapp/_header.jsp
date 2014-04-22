@@ -18,7 +18,8 @@
 
 	<div class="menu"> 
 		<a href="paste.jsp">Create paste</a> 	
-		<a href="/mypastes">Archive</a> 	
+		<a href="/mypastes">My archive</a> 		
+		<a href="/otherpastes">Other pastes</a>	
 		<a href="settings.jsp">My settings</a> 
 
 	</div> 

@@ -60,7 +60,44 @@ public class ViewServlet extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//TODO
+		response.setContentType("text/html");
 		
+		HttpSession session=request.getSession();
+		
+		String button = request.getParameter("button");
+		String name = request.getParameter("name");
+		String text = request.getParameter("text");
+		
+//		
+		
+		String act = request.getParameter("button");
+		if (button.equals("delete")) {
+		    //delete button was pressed
+		    
+			try {
+			    PreparedStatement pst=con.prepareStatement("DELETE FROM pastes WHERE name = '" + name + "' AND paste = '" + text + "'");
+				ResultSet result = pst.executeQuery(); 
+				result.next();
+			} catch (SQLException e) {
+				e.printStackTrace(System.out);
+			}
+
+
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/archive.jsp");
+	    	rd.forward(request, response);
+
+
+		} /*else if (button.equals("edit")) {
+		    //update button was pressed
+		    
+		} else if (button == null) {
+		    //no button has been selected
+		} else {
+		    //someone has altered the HTML and sent a different value!
+		}*/
+		
+
+		
+				
 	}
 }
