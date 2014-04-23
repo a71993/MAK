@@ -51,10 +51,10 @@ public class PasteEditServlet extends HttpServlet{
 		String exposureNew=request.getParameter("exposure");
 		if(nameNew != "" && pasteNew != "") {
 			try {
-				PreparedStatement pst1 = con.prepareStatement("update pastes set name = ?, paste = ?, syntax = ?, exposure = ? where name = ? AND posted_time = ?");
-				ResultSet result = pst1.executeQuery();
-				result.next();
-			    PreparedStatement pst2=con.prepareStatement("insert into pastes (user_id, name, paste, syntax, exposure) values (?,?,?,?,?)");
+//				PreparedStatement pst1 = con.prepareStatement("select id from users where username = '" + session.getAttribute("user").toString() + "'");
+//				ResultSet result = pst1.executeQuery();
+//				result.next();
+			    PreparedStatement pst2=con.prepareStatement("update pastes set name = ?, paste = ?, syntax = ?, exposure = ? where name = ? AND paste = ?");
 				pst2.clearParameters();
 				pst2.setString(1, nameNew);
 				pst2.setString(2, pasteNew);
@@ -68,8 +68,10 @@ public class PasteEditServlet extends HttpServlet{
 				e.printStackTrace(System.out);
 			}
 
-		    session.setAttribute("name", name);
-		    session.setAttribute("text", paste);
+		    session.setAttribute("name", nameNew);
+		    session.setAttribute("text", pasteNew);
+		    session.setAttribute("syntax", syntaxNew);
+		    session.setAttribute("exposure", exposureNew);
 
 		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/view.jsp");
 		    rd.forward(request, response);

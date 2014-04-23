@@ -68,4 +68,8 @@ public class MyPastesServlet extends HttpServlet{
 	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/archive.jsp");
 	    rd.forward(request, response);
 	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
 }

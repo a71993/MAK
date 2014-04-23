@@ -21,31 +21,17 @@
 	       	</pre>
 	       	</div>
 	       	
-   	         <div id="syntaxnupud2">  
-                    
-                <div id="syntax2">
-                    <label for="Syntax" >Syntax:</label>
-                    <select id="Syntax" name="syntax">
-                      <option value="HTML">HTML</option>
-                      <option value="C++">C++</option>
-                      <option value="Python">Python</option>
-                      <option value="Java">Java</option>
-                </select>
-                </div>
-                
-                <div id="syntax1">
-                    <label for="Exposure" >Exposure:</label>
-                    <select id="Exposure" name="exposure">
-                      <option value="Public">Public</option>
-                      <option value="Private">Private</option>
-                    </select> 
-                </div>
-            </div>
+   	        
 	       	
 	       	<div id="viewbuttons">
 	       		<form method="post" action=/view>
-	       			<input id="editPaste" type="submit" value="Edit" />
-	       			<input id="deletePaste" type="submit" value="Delete" />
+	       		
+	       			<input type="hidden" name="name" value="${name}"/> 
+	       			<input type="hidden" name="text" value="${text}"/> 
+	       			<input type="hidden" name="syntax" value="${syntax}"/> 
+	       			<input type="hidden" name="exposure" value="${exposure}"/> 
+	       			<input id="editPaste" type=${isThisMyView == 'true' ? 'submit' : 'hidden'} value="Edit" name="button"/>
+	       			<input id="deletePaste" type=${isThisMyView == 'true' ? 'submit' : 'hidden'} value="Delete" name="button"/>
 	       			<input id="copyToClipoard" type="button" value="Copy to Clipboard" />
 	       		</form>
 	       	</div>

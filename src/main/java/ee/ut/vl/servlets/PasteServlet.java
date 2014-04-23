@@ -66,6 +66,8 @@ public class PasteServlet extends HttpServlet{
 
 		    session.setAttribute("name", name);
 		    session.setAttribute("text", paste);
+		    session.setAttribute("syntax", syntax);
+		    session.setAttribute("exposure", exposure);
 
 		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/view.jsp");
 		    rd.forward(request, response);
