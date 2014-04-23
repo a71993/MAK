@@ -21,8 +21,29 @@
 	       	</pre>
 	       	</div>
 	       	
+   	         <div id="syntaxnupud2">  
+                    
+                <div id="syntax2">
+                    <label for="Syntax" >Syntax:</label>
+                    <select id="Syntax" name="syntax">
+                      <option value="HTML">HTML</option>
+                      <option value="C++">C++</option>
+                      <option value="Python">Python</option>
+                      <option value="Java">Java</option>
+                </select>
+                </div>
+                
+                <div id="syntax1">
+                    <label for="Exposure" >Exposure:</label>
+                    <select id="Exposure" name="exposure">
+                      <option value="Public">Public</option>
+                      <option value="Private">Private</option>
+                    </select> 
+                </div>
+            </div>
+	       	
 	       	<div id="viewbuttons">
-	       		<form>
+	       		<form method="post" action=/view>
 	       			<input id="editPaste" type="submit" value="Edit" />
 	       			<input id="deletePaste" type="submit" value="Delete" />
 	       			<input id="copyToClipoard" type="button" value="Copy to Clipboard" />

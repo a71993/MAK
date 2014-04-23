@@ -66,16 +66,13 @@ public class ViewServlet extends HttpServlet{
 		
 		String button = request.getParameter("button");
 		String name = request.getParameter("name");
-		String text = request.getParameter("text");
+		String paste = request.getParameter("text");
 		
-//		
-		
-		String act = request.getParameter("button");
 		if (button.equals("delete")) {
 		    //delete button was pressed
 		    
 			try {
-			    PreparedStatement pst=con.prepareStatement("DELETE FROM pastes WHERE name = '" + name + "' AND paste = '" + text + "'");
+			    PreparedStatement pst=con.prepareStatement("DELETE FROM pastes WHERE name = '" + name + "' AND paste = '" + paste + "'");
 				ResultSet result = pst.executeQuery(); 
 				result.next();
 			} catch (SQLException e) {
@@ -87,10 +84,14 @@ public class ViewServlet extends HttpServlet{
 	    	rd.forward(request, response);
 
 
-		} /*else if (button.equals("edit")) {
-		    //update button was pressed
+		} else if (button.equals("edit")) {
+		
+		    session.setAttribute("name", name);
+		    session.setAttribute("text", paste);
 		    
-		} else if (button == null) {
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/pasteEdit.jsp");
+	    	rd.forward(request, response);
+		} /*else if (button == null) {
 		    //no button has been selected
 		} else {
 		    //someone has altered the HTML and sent a different value!

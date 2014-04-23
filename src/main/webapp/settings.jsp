@@ -14,13 +14,13 @@
 				<form id="my_settings" class="form" method="post">
 
 					<label for="old_username" >Old password:</label>
-					<input id="old_username" type="text" /><br />
+					<input id="old_username" type="password" /><br />
 		
 				    <label for="new_password" >New password:</label>
-				    <input id="new_password" type="text" /><br />
+				    <input id="new_password" type="password" /><br />
 	
 				    <label for="new_password_again" >New password confirm:</label>
-				    <input id="new_password_again" type="text" /><br />
+				    <input id="new_password_again" type="password" /><br />
 	
 				    <input id="submit" type="button" value="Submit"><br />
 

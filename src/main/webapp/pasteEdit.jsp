@@ -17,13 +17,13 @@
                 <p id="Paste"> Paste </p>
                 
                 <div id="nimi">
-			        <input id="text" type="text" name="name" />
+			        <input id="text" type="text" name="name" value="${pastes.name}" />
                     </div>
                 <input id="syntaxnupud" type="button" value="Nupud">
                     
                 
                     <div id="tekst">
-                    <textarea id="tekstibox" name="paste" rows="30" cols="90"></textarea>
+                    <textarea id="tekstibox" name="paste" rows="30" cols="90">${pastes.text}</textarea>
                     </div>
                 
                 

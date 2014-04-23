@@ -25,10 +25,10 @@
 							<input id="email2" name="email2" type="text" /> <br />
 							
 							<label for="password1" >Password</label>
-							<input id="password1" name="password1" type="text" /> <br />
+							<input id="password1" name="password1" type="password" /> <br />
 							
 							<label for="password2" >Confirm password</label>
-							<input id="password2" name="password2" type="text" /> <br />
+							<input id="password2" name="password2" type="password" /> <br />
 						
 							<input id="submitbutton" type="button" value="Submit" onclick="isempty();"/>
 						

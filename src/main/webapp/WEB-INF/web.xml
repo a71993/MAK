@@ -46,6 +46,15 @@
     	<servlet-name>PasteServlet</servlet-name>
    		<url-pattern>/paste</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>PasteEditServlet</servlet-name>
+    	<servlet-class>ee.ut.vl.servlets.PasteEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>PasteEditServlet</servlet-name>
+   		<url-pattern>/pasteEdit</url-pattern>
+	</servlet-mapping>
   
 
 	<servlet>
