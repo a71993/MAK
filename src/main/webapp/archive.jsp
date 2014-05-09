@@ -12,7 +12,7 @@
 		
 		<div id="main"> 
 			
-			<p>Mul on kleepse kokku: <c:out value="${totalPastes}"  /></p>
+			<p id="total">Mul on kleepse kokku: <c:out value="${totalPastes}"  /></p>
 		
 			<table id="pastetable">
 				<thead>
@@ -26,10 +26,10 @@
 				<tbody>
 					<c:forEach var="pastes" items="${pastes}">
 					<tr>
-						<td><a href="/view?name=${pastes.urlName}"><c:out value="${pastes.name}"  /></a></td>
+						<td><a class="pastelink" id="${pastes.name}" href="/view?name=${pastes.urlName}"><c:out value="${pastes.name}"  /></a></td>
 						<td><c:out value="${pastes.posted_time}"  /></td>
-						<td><c:out value="${pastes.syntax}"  /></td>
-						<td><c:out value="${pastes.exposure}"  /></td>
+						<td class="syntax"><c:out value="${pastes.syntax}"  /></td>
+						<td class="exposure"><c:out value="${pastes.exposure}"  /></td>
 					</tr>
 					</c:forEach>
 				</tbody>

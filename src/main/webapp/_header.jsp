@@ -17,10 +17,10 @@
 	<span id="logo">MAKbin</span> 
 
 	<div class="menu"> 
-		<a href="paste.jsp">Create paste</a> 	
-		<a href="/mypastes">My archive</a> 		
-		<a href="/otherpastes">Other pastes</a>	
-		<a href="settings.jsp">My settings</a> 
+		<a id="createpaste" href="paste.jsp">Create paste</a> 	
+		<a id="myarchive" href="/mypastes">My archive</a> 		
+		<a id="otherpastes" href="/otherpastes">Other pastes</a>	
+		<a id="mysettings" href="settings.jsp">My settings</a> 
 
 	</div> 
 </div>
