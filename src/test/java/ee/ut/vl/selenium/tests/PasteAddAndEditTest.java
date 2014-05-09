@@ -46,7 +46,7 @@ public class PasteAddAndEditTest {
 		assertThat(pasteViewPage.getPasteText(), containsString("hanemaksa"));
 		MyArchivePage myArchivePage = MyArchivePage.navigateTo(driver);
 		assertThat(myArchivePage.getNewestPasteSyntax(), containsString("C++"));
-		assertThat(myArchivePage.getNewestPasteExposure(), not(containsString("Private")));
+		assertThat(myArchivePage.getNewestPasteExposure(), containsString("Private"));
 		PasteViewPage pasteViewPage2 = myArchivePage.goViewNewestPaste();
 		MyArchivePage myArchivePage2 = pasteViewPage2.deletePaste();
 		myArchivePage2.logOut();
@@ -76,7 +76,7 @@ public class PasteAddAndEditTest {
 		assertThat(pasteViewPage2.getPasteText(), not(containsString("hanemaksa")));
 		MyArchivePage myArchivePage = MyArchivePage.navigateTo(driver);
 		assertThat(myArchivePage.getNewestPasteSyntax(), containsString("Python"));
-		assertThat(myArchivePage.getNewestPasteExposure(), not(containsString("Public")));
+		assertThat(myArchivePage.getNewestPasteExposure(), containsString("Public"));
 		PasteViewPage pasteViewPage3 = myArchivePage.goViewNewestPaste();
 		MyArchivePage myArchivePage2 = pasteViewPage3.deletePaste();
 		myArchivePage2.logOut();
