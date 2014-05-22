@@ -1,5 +1,5 @@
 .form {
-	width: 35%;
+	width: 30%;
 	height: auto;
 	margin: auto;
 	padding: 3%;
@@ -18,5 +18,5 @@
 }
 
 br {
-	clear: left;
+	clear: right;
 }
