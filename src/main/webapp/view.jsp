@@ -14,7 +14,8 @@
 			<h2 id="nameOfPaste">${name}</h2>
 			
 			<div id="view"> 
-			<pre class="line-numbers" data-start="1"><code class="language-java">${text}</code></pre>
+			
+			<pre class="line-numbers" data-start="1"><code class=${syntax}>${text}</code></pre>
 	       	</div>
 	       	
    	        
