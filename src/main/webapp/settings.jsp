@@ -11,7 +11,7 @@
 			<jsp:include page="_header.jsp"/>
 			<div id="main">
 
-				<form id="my_settings" class="form" method="post">
+				<form id="my_settings" class="form2" method="post">
 
 					<label for="old_username" >Old password:</label>
 					<input id="old_username" type="password" /><br />
