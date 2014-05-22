@@ -14,7 +14,7 @@ CREATE TABLE public.pastes (
 	user_id              integer  NOT NULL,
 	name                 varchar(20),
 	paste                text,
-	syntax               varchar(10),
+	syntax               varchar(20),
 	posted_time          timestamp DEFAULT current_timestamp,
 	exposure             varchar(7),
 	CONSTRAINT texts_pkey PRIMARY KEY ( id )

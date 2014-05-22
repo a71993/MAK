@@ -37,10 +37,17 @@
                     <div id="syntax2">
                         <label for="Syntax" >Syntax:</label>
                         <select id="Syntax" name="syntax">
-                          <option value="HTML">HTML</option>
-                          <option value="C++">C++</option>
-                          <option value="Python">Python</option>
-                          <option value="Java" selected>Java</option>
+                          <option value="language-markup">HTML</option>
+                          <option value="language-cpp">c++</option>
+                          <option value="language-python">Python</option>
+                          <option value="language-java" selected>Java</option>
+                          <option value="language-c">C</option>
+                          <option value="language-javascript">JavaScript</option>
+                          <option value="language-http">Http</option>
+                          <option value="language-sql">SQL</option>
+                          <option value="language-csharp">C#</option>
+                          <option value="language-php">PHP</option>
+                          <option value="language-ruby">Ruby</option>
                     </select>
                     </div>
                     
