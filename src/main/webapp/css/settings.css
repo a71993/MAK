@@ -1,36 +1,23 @@
-#setting_nupud{
-    position: relative;
-    top: 15em;
-    left: 20em;
-    display: inline-block;
-    
-}
-#forgot{
-    position: absolute;
-    display: inline-block;
-    left: 3em; 
-    top: 4em;
-}
-#submit{
-    position: absolute;
-    display: inline-block;
-    top: 24em;
-    left: 47em;    
-    border:1em;
+
+.form2 {
+	width: 35%;
+	height: auto;
+	margin: auto;
+	padding: 3%;
 }
 
-
-#old_username{
-    position: absolute;
-    left: 50em;
+.form2 input {
+	float: right;
+	margin-bottom: 1em;
 }
 
-#new_password{
-    position: absolute;
-    left: 50em;
+.form2 label {
+	text-align: left;
+	display:block;
+	float: left;
+	margin-bottom: 1em;
 }
 
-#new_password_again{
-    position: absolute;
-    left: 50em;
+br {
+	clear: left;
 }

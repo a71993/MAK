@@ -1,19 +1,19 @@
 .form {
-	width: 30%;
+	width: 35%;
 	height: auto;
 	margin: auto;
 	padding: 3%;
 }
 
 .form input {
-	float: left;
+	float: right;
 	margin-bottom: 1em;
 }
 
 .form label {
 	text-align: left;
 	display:block;
-	float: right;
+	float: left;
 	margin-bottom: 1em;
 }
 
