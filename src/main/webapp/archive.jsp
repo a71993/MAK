@@ -26,7 +26,7 @@
 				<tbody>
 					<c:forEach var="pastes" items="${pastes}">
 					<tr>
-						<td><a class="pastelink" id="${pastes.name}" href="/view?name=${pastes.urlName}"><c:out value="${pastes.name}"  /></a></td>
+						<td><a class="pastelink" id="${pastes.id}" href="/view?id=${pastes.urlId}"><c:out value="${pastes.name}"  /></a></td>
 						<td><c:out value="${pastes.posted_time}"  /></td>
 						<td class="syntax"><c:out value="${pastes.syntax}"  /></td>
 						<td class="exposure"><c:out value="${pastes.exposure}"  /></td>

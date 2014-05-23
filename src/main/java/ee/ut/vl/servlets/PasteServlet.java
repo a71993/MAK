@@ -46,6 +46,13 @@ public class PasteServlet extends HttpServlet{
 		String paste=request.getParameter("paste");
 		String syntax=request.getParameter("syntax");
 		String exposure=request.getParameter("exposure");
+		
+		//escappe evil markup chars
+		paste=paste.replaceAll("<", "&lt;");
+		paste=paste.replaceAll(">", "&gt;");
+		paste=paste.replaceAll("\"", "&quot;");
+		paste=paste.replaceAll("'", "&lsquo;");
+		
 		if(name != "" && paste != "") {
 			try {
 				PreparedStatement pst1 = con.prepareStatement("select id from users where username = '" + session.getAttribute("user").toString() + "'");

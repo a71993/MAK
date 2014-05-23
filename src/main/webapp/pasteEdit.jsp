@@ -10,54 +10,58 @@
 			
 			<jsp:include page="_header.jsp"/>
 			
-			<div id="main">
-                <form id="my_settings" method="post" action="/pasteedit">
-                    
-                    
-                <p id="Paste"> Paste </p>
+			<div id="main" class="container">
+				<h2>Paste</h2>
+				
+                <form id="my_settings" method="post" action="/paste">
                 
-                <div id="nimi">
-			        <input id="text" type="text" name="name" value="${name}" />
-                    </div>
-                <input id="syntaxnupud" type="button" value="Nupud">
-                    
-                
-                    <div id="tekst">
-                    <textarea id="tekstibox" name="paste" rows="30" cols="90">${text}</textarea>
-                    </div>
-                
-                
-               <p id="Preview2"> Preview</p>
-                 <div id="preview"> 
-                     <p id="tekst2"></p>
-                     
-		        </div> 
-                <div id="syntaxnupud2">  
-                    
-                    <div id="syntax2">
-                        <label for="Syntax" >Syntax:</label>
-                        <select id="Syntax" name="syntax">
-                          <option value="HTML" ${syntax == 'HTML' ? 'selected' : ''}>HTML</option>
-                          <option value="C++" ${syntax == 'C++' ? 'selected' : ''}>C++</option>
-                          <option value="Python" ${syntax == 'Python' ? 'selected' : ''}>Python</option>
-                          <option value="Java" ${syntax == 'Java' ? 'selected' : ''}>Java</option>
-                    </select>
-                    </div>
-                    
-                    <div id="syntax1">
-                        <label for="Exposure" >Exposure:</label>
-                        <select id="Exposure" name="exposure">
-                          <option value="Public" ${exposure == 'Public' ? 'selected' : ''}>Public</option>
-                          <option value="Private" ${exposure == 'Private' ? 'selected' : ''}>Private</option>
-                        </select> 
-                    </div>
-                </div>
-                <div id="submit2">
-                   
-				 	<input id="submitbutton" type="submit" value="Submit" /> 
-				</div> 
+					<p class="form-row">
+						<label>
+							Nimi:
+							<input id="text" type="text" name="name" value="${name}"/>
+						</label>
+					</p>
+					
+					<p class="form-row">
+						<textarea id="editor" class="editor" name="paste">${text}</textarea>
+					</p>
+					
+					<p class="form-row">
+						<label class="label-inline">
+							syntax:
+							<select id="syntax" name="syntax">
+								<option value="markup" ${syntax == 'markup' ? 'selected' : ''}>HTML</option>
+								<option value="cpp" ${syntax == 'cpp' ? 'selected' : ''}>C++</option>
+								<option value="python" ${syntax == 'python' ? 'selected' : ''}>Python</option>
+								<option value="java" ${syntax == 'java' ? 'selected' : ''}>Java</option>
+								<option value="c" ${syntax == 'c' ? 'selected' : ''}>C</option>
+								<option value="javascript" ${syntax == 'javascript' ? 'selected' : ''}>JavaScript</option>
+								<option value="http" ${syntax == 'http' ? 'selected' : ''}>Http</option>
+								<option value="sql" ${syntax == 'sql' ? 'selected' : ''}>SQL</option>
+								<option value="csharp" ${syntax == 'csharp' ? 'selected' : ''}>C#</option>
+								<option value="php" ${syntax == 'php' ? 'selected' : ''}>PHP</option>
+								<option value="ruby" ${syntax == 'ruby' ? 'selected' : ''}>Ruby</option>
+							</select>
+						</label>
+						
+						<label class="label-inline">
+							Exposure:
+							<select id="Exposure" name="exposure">
+								<option value="Public" ${exposure == 'Public' ? 'selected' : ''}>Public</option>
+								<option value="Private" ${exposure == 'Private' ? 'selected' : ''}>Private</option>
+							</select> 
+						</label>
+						
+						<label class="label-inline pull-pight">
+							<input id="submitbutton" type="submit" value="Submit" />
+						</label>
+					</p>
                 
                 </form>	
+                
+				<div id="preview-wrap"> 
+					<pre class="line-numbers" data-start="1"><code id="preview-contents" class="language-markup"></code></pre>
+				</div>
 			</div> 
 			
 			<jsp:include page="_footer.jsp"/>

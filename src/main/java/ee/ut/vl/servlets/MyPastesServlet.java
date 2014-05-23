@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 
 import ee.ut.vl.DatabaseUtil;
 import ee.ut.vl.resources.Paste;
+import java.net.URISyntaxException;
 
 public class MyPastesServlet extends HttpServlet{
 	
@@ -34,11 +35,14 @@ public class MyPastesServlet extends HttpServlet{
 		}
 		try {
 			con = DatabaseUtil.getConnection();
-		}catch (Exception e) {
+		}catch (URISyntaxException e) {
+			e.printStackTrace(System.out);
+		} catch (SQLException e) {
 			e.printStackTrace(System.out);
 		}
     }
 	
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
 		
@@ -48,10 +52,10 @@ public class MyPastesServlet extends HttpServlet{
 		Paste paste = new Paste();
 		int totalPastes = 0;
 		try {
-		    PreparedStatement pst1=con.prepareStatement("SELECT name, paste, posted_time, syntax, exposure FROM pastes JOIN users ON users.id = pastes.user_id WHERE users.username = '" + myUsername + "' ORDER BY posted_time DESC");
+		    PreparedStatement pst1=con.prepareStatement("SELECT name, paste, posted_time, syntax, exposure, pastes.id FROM pastes JOIN users ON users.id = pastes.user_id WHERE users.username = '" + myUsername + "' ORDER BY posted_time DESC");
 			ResultSet result1 = pst1.executeQuery();
 			while(result1.next()){
-				paste = new Paste(URLEncoder.encode(result1.getString(1),"utf-8"), result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5));
+				paste = new Paste(result1.getLong(6), result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5), result1.getLong(6));
 				pastes.add(paste);
 			}
 			PreparedStatement pst2=con.prepareStatement("select username, count(pastes.id) from users JOIN pastes ON users.id = pastes.user_id where users.username = '" + myUsername + "' GROUP BY username");
@@ -69,6 +73,7 @@ public class MyPastesServlet extends HttpServlet{
 	    rd.forward(request, response);
 	}
 	
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}

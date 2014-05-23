@@ -14,22 +14,22 @@
 			<h2 id="nameOfPaste">${name}</h2>
 			
 			<div id="view"> 
+				<pre class="line-numbers" data-start="1"><code class="language-${syntax}">${text}</code></pre>
 			
-			<pre class="line-numbers" data-start="1"><code class=${syntax}>${text}</code></pre>
 	       	</div>
 	       	
    	        
 	       	
 	       	<div id="viewbuttons">
-	       		<form method="post" action=/view>
+	       		<form method="post" action="/view">
 	       		
+	       			<input type="hidden" name="id" value="${id}"/> 
 	       			<input type="hidden" name="name" value="${name}"/> 
 	       			<input type="hidden" name="text" value="${text}"/> 
 	       			<input type="hidden" name="syntax" value="${syntax}"/> 
 	       			<input type="hidden" name="exposure" value="${exposure}"/> 
 	       			<input id="editPaste" type="${isThisMyView != 'false' ? 'submit' : 'hidden'}" value="Edit" name="button"/>
 	       			<input id="deletePaste" type="${isThisMyView != 'false' ? 'submit' : 'hidden'}" value="Delete" name="button"/>
-	       			<input id="copyToClipoard" type="button" value="Copy to Clipboard" />
 	       		</form>
 	       	</div>
 		</div> 

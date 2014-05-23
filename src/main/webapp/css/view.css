@@ -1,11 +1,12 @@
 #view{
 	border: 1px solid green;
 	padding: 0.5em;
-	margin-left: auto;
-	margin-right: auto;
 	background-color: white;
 	width: 75%;
-	height: auto;
+	height: 450px;
+	overflow-y: scroll;
+	margin: 20px auto;
+	background-color: #f5f2f0;
 }
 
 #viewbuttons{

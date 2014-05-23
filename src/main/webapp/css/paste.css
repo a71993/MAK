@@ -112,3 +112,48 @@
     display: inline-block;
     left: 2em;
 }
+
+
+/*22.05*/
+.container {
+	box-sizing: border-box;
+	padding: 20px 40px;
+}
+
+#preview-wrap {
+	height: 350px;
+	overflow-y: scroll;
+	margin: 20px auto;
+	background-color: #f5f2f0;
+}
+#preview-contents {
+	display:block;
+	min-height: 30px;
+	outline: none;
+}
+
+.pull-pight {
+	float: right !important;
+	margin-right: 0 !important;
+}
+
+.form-row {
+	overflow: hidden;
+}
+.form-row label {
+	display: block;
+}
+.form-row label.label-inline {
+	display: inline-block;
+	margin-right: 30px
+}
+
+.form-row input[type="text"],
+.form-row textarea {
+	display: block;
+	width: 100%;
+}
+
+.form-row .editor {
+	height: 350px;
+}

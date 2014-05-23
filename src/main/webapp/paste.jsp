@@ -10,61 +10,59 @@
 			
 			<jsp:include page="_header.jsp"/>
 			
-			<div id="main">
+			<div id="main" class="container">
+				<h2>Paste</h2>
+				
                 <form id="my_settings" method="post" action="/paste">
-                    
-                    
-                <p id="Paste"> Paste </p>
                 
-                <div id="nimi">
-			        <input id="text" type="text" name="name" />
-                    </div>
-                <input id="syntaxnupud" type="button" value="Nupud">
+					<p class="form-row">
+						<label>
+							Nimi:
+							<input id="text" type="text" name="name" />
+						</label>
+					</p>
+					
+					<p class="form-row">
+						<textarea id="editor" class="editor" name="paste"></textarea>
+					</p>
+					
                     
-                
-                    <div id="tekst">
-                    <textarea id="tekstibox" name="paste" rows="30" cols="90"></textarea>
-                    </div>
-                
-                
-               <p id="Preview2"> Preview</p>
-                 <div id="preview"> 
-                     <p id="tekst2"></p>
-                     
-		        </div> 
-                <div id="syntaxnupud2">  
-                    
-                    <div id="syntax2">
-                        <label for="Syntax" >Syntax:</label>
-                        <select id="Syntax" name="syntax">
-                          <option value="language-markup">HTML</option>
-                          <option value="language-cpp">c++</option>
-                          <option value="language-python">Python</option>
-                          <option value="language-java" selected>Java</option>
-                          <option value="language-c">C</option>
-                          <option value="language-javascript">JavaScript</option>
-                          <option value="language-http">Http</option>
-                          <option value="language-sql">SQL</option>
-                          <option value="language-csharp">C#</option>
-                          <option value="language-php">PHP</option>
-                          <option value="language-ruby">Ruby</option>
-                    </select>
-                    </div>
-                    
-                    <div id="syntax1">
-                        <label for="Exposure" >Exposure:</label>
-                        <select id="Exposure" name="exposure">
-                          <option value="Public">Public</option>
-                          <option value="Private">Private</option>
-                        </select> 
-                    </div>
-                </div>
-                <div id="submit2">
-                   
-				 	<input id="submitbutton" type="submit" value="Submit" /> 
-				</div> 
-                
-                </form>	
+					<p class="form-row">
+						<label class="label-inline">
+							syntax:
+							<select id="syntax" name="syntax">
+								<option value="markup" selected>HTML</option>
+								<option value="cpp">C++</option>
+								<option value="python">Python</option>
+								<option value="java">Java</option>
+								<option value="c">C</option>
+								<option value="javascript">JavaScript</option>
+								<option value="http">Http</option>
+								<option value="sql">SQL</option>
+								<option value="csharp">C#</option>
+								<option value="php">PHP</option>
+								<option value="ruby">Ruby</option>
+							</select>
+						</label>
+						
+						<label class="label-inline">
+							Exposure:
+							<select id="Exposure" name="exposure">
+								<option value="Public">Public</option>
+								<option value="Private">Private</option>
+							</select> 
+						</label>
+						
+						<label class="label-inline pull-pight">
+							<input id="submitbutton" type="submit" value="Submit" />
+						</label>
+					</p>
+
+				</form>	
+				
+				<div id="preview-wrap"> 
+					<pre class="line-numbers" data-start="1"><code id="preview-contents" class="language-markup"></code></pre>
+				</div>
 			</div> 
 			
 			<jsp:include page="_footer.jsp"/>

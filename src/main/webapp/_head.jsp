@@ -13,7 +13,9 @@
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript" src="js/FBlogin.js"> </script>
 
-<script src="js/prism.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<script src="js/prism.js"></script>
 <link href="css/prism.css" rel="stylesheet" />
 
 <script type="text/javascript" src="js/reg_test.js"> </script>

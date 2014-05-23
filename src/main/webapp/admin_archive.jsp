@@ -25,7 +25,7 @@
 					<tbody>
 					<c:forEach var="pastes" items="${pastes}">
 					<tr>
-						<td><a href="/view?name=${pastes.urlName}"><c:out value="${pastes.name}"  /></a></td>
+						<td><a href="/view?id=${pastes.urlId}"><c:out value="${pastes.name}"  /></a></td>
 						<td><c:out value="${pastes.posted_time}"  /></td>
 						<td><c:out value="${pastes.syntax}"  /></td>
 						<td><c:out value="${pastes.creator}"  /></td>

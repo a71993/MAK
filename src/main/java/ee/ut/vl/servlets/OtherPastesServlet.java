@@ -47,10 +47,10 @@ public class OtherPastesServlet extends HttpServlet{
 		List<Paste> pastes = new ArrayList<Paste>();
 		Paste paste = new Paste();
 		try {
-		    PreparedStatement pst1=con.prepareStatement("SELECT name, paste, posted_time, syntax, exposure, username FROM pastes JOIN users ON users.id = pastes.user_id WHERE users.username != '"+ myUsername +"' AND exposure = 'Public' ORDER BY posted_time DESC");
+		    PreparedStatement pst1=con.prepareStatement("SELECT name, paste, posted_time, syntax, exposure, username, pastes.id FROM pastes JOIN users ON users.id = pastes.user_id WHERE users.username != '"+ myUsername +"' AND exposure = 'Public' ORDER BY posted_time DESC");
 			ResultSet result1 = pst1.executeQuery();
 			while(result1.next()){
-				paste = new Paste(URLEncoder.encode(result1.getString(1),"utf-8"), result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5), result1.getString(6));
+				paste = new Paste(result1.getLong(7), result1.getString(1),result1.getString(2),result1.getTimestamp(3), result1.getString(4),result1.getString(5), result1.getString(6), result1.getLong(7));
 				pastes.add(paste);
 			}
 		} catch (SQLException e) {

@@ -13,7 +13,8 @@ public class Paste {
 	private String syntax;;
 	private String exposure;
 	
-
+	
+	private long urlId;
 	private String urlName;
 	
 	
@@ -28,6 +29,17 @@ public class Paste {
 		this.syntax = syntax;
 		this.exposure = exposure;
 	}
+	
+		public Paste(long urlId, String name, String text, Timestamp posted_time, String syntax, String exposure,
+			long id) {
+		this.urlId = urlId;
+		this.name = name;
+		this.text = text;
+		this.posted_time = posted_time;
+		this.syntax = syntax;
+		this.exposure = exposure;
+		this.id = id;
+	}
 
 	public Paste(String urlName, String name, String text, Timestamp posted_time,
 			String syntax, String exposure, String creator) {
@@ -39,6 +51,19 @@ public class Paste {
 		this.syntax = syntax;
 		this.exposure = exposure;
 		this.urlName = urlName;
+	}
+	
+	public Paste(long urlId, String name, String text, Timestamp posted_time,
+			String syntax, String exposure, String creator, long id) {
+		super();
+		this.creator = creator;
+		this.name = name;
+		this.text = text;
+		this.posted_time = posted_time;
+		this.syntax = syntax;
+		this.exposure = exposure;
+		this.urlId = urlId;
+		this.id = id;
 	}
 
 	public long getId() {
@@ -101,5 +126,14 @@ public class Paste {
 	public void setUrlName(String urlName) {
 		this.urlName = urlName;
 	}
+	
+	public long getUrlId() {
+		return urlId;
+	}
+
+	public void setUrlId(long urlId) {
+		this.urlId = urlId;
+	}
+	
 	
 }
